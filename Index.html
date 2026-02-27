@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artist's Atelier | YouTube</title>
+    <style>
+        /* Modern Color Palette */
+        :root {
+            --studio-dark: #1a1c20;
+            --studio-light: #2c2f36;
+            --accent: #e0c097; /* Soft Champagne/Gold */
+            --glass: rgba(255, 255, 255, 0.05);
+            --text-main: #f0f0f0;
+            --text-dim: #a0a0a0;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=2071');
+            background-size:cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; 
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            padding: 60px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 900px;
+        }
+        .vision-text {
+            background: rgba(255,255,255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba( 255,255,255, 0.1);
+            margin-top: 20px; 
+        } 
+
+        .vision-text p {
+            font-size: 1.5rem;
+            line-height: 1.6; 
+            color: white;
+            margin: 0; 
+        }
+
+            h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin: 0;
+            letter-spacing: -1px;
+            background: linear-gradient(to bottom, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Scrollable Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--glass);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        h2 {2rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Subscribe Button */
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--accent);
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            margin-top: 7px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(224, 192, 151, 0.2);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(224, 192, 151, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px;
+            border-top: 1px solid var(--glass);
+            color: var(--text-dim);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            animation: bounce 2s infinite;
+            color: var(--accent);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(10px);}
+            60% {transform: translateY(5px);}
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-card">
+            <span class="tagline">Content Creator</span>
+            <h1>Artist Aaradhya Patel</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 20px auto; color: var(--text-dim);">
+                Exploring the boundary between imagination and ink.From hyper-realistic sketches to fluid abstract concepts, I transform blank canvases into stories. Join me on my creative journey.
+            </p>
+            <a href="http://www.youtube.com/@Artistic_Muse1" class="btn">Subscribe to the Muse</a>
+        </div>
+        <div class="scroll-indicator">▼ Scroll to Explore</div>
+    </header>
+
+    <section id="about">
+        <h2>The Vision</h2>
+        <div class="vision-text">
+            <p>My goal is to master the art and professional video editing, practicing to get better and share my favorite creations with everyone. While I am very passionate about my art, I also stay focused on my studies to build a bright future. I designed and built this website using <strong>HTML and CSS</strong>.</p>  
+        </div>
+    </section>
+
+    <section id="collections">
+        <h2>About the Channel</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="color: var(--accent);">Mastering Anime Art</h3>
+                <p>I love drawing my favorite anime characters! Learn the basic fundamentals of art that define the modern art aesthetic.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--accent);">Cool Video Edits</h3>
+                <p>This is where i put all my music edits. I use cool transitions and effects to make the videos look awesome!</p>
+            </div>
+            <div class="card"> 
+                <h3 style="color: var(--accent);">My Creations</h3>
+                <p>A place for all my random projects, drawings and fun things I Make when I'm bored.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--accent);">The Master's Study</h3>
+                <p>Deep dives into color theory, anatomy and lighting techniques used by the greats.</p> 
+            </div> 
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Creative Soul. Created for the Inspired.</p>
+    </footer>
+
+</body>
+</html>
